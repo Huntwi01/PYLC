@@ -12,6 +12,9 @@ PyPLC is a high-performance, low-cost "Soft-PLC" runtime framework engineered to
   - *Power Side:* A native Python integration leveraging `Numba` (Just-In-Time compilation) and `NumPy` for high-speed calculation and predictive maintenance.
 - **Edge-to-Cloud Scada Panel:** Built-in hooks for a local Next.js HMI Web Dashboard and real-time database logging via PocketBase.
 
+## 📂 Repository File Structure
+
+```text
 pyplc/
 ├── .github/                  # CI/CD Workflows
 ├── config/
@@ -45,4 +48,5 @@ pyplc/
                       │ (Sub-10ms Scan Loop)
                       ▼
           [ Core 2: Numba Logic Engine ] ───> 📊 [ NumPy Predictive Data ] ───> PocketBase
+
 ALL CONCEPT CURRENTLY.
