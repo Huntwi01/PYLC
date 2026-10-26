@@ -1,0 +1,74 @@
+/* PYLC HMI — dark industrial theme, ported from the demo_web.py page. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0d1512;
+  color: #d7e0da;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 28px 20px 40px; }
+h1 { font-size: 20px; letter-spacing: .14em; margin: 0 0 4px; }
+.sub { color: #7d9184; font-size: 13px; margin-bottom: 20px; line-height: 1.6; }
+.live { color: #39d98a; }
+.offline { color: #ff5f56; }
+.badge {
+  display: inline-block; margin-left: 10px; padding: 2px 10px; border-radius: 999px;
+  border: 1px solid #2e8f5b; background: #1f6f43; color: #fff;
+  font-size: 12px; letter-spacing: .1em; vertical-align: 2px;
+}
+.badge.demo { background: #182420; border-color: #2b3d33; color: #8fa398; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin-bottom: 20px;
+}
+.cell { background: #14201a; border: 1px solid #24382d; border-radius: 10px; padding: 14px; }
+.cell .nm { font-size: 12px; letter-spacing: .1em; color: #8fa398; }
+.led {
+  display: inline-block; width: 14px; height: 14px; border-radius: 50%;
+  background: #233028; margin-right: 8px; vertical-align: -2px;
+}
+.led.on { background: #39d98a; box-shadow: 0 0 10px #39d98a; }
+.led.on.red { background: #ff5f56; box-shadow: 0 0 10px #ff5f56; }
+.led.on.amber { background: #ffb340; box-shadow: 0 0 10px #ffb340; }
+.cell .st { font-size: 16px; margin-top: 8px; }
+.big { font-size: 44px; text-align: right; }
+.big-sm { font-size: 30px; text-align: right; padding-top: 10px; }
+
+.panel { background: #14201a; border: 1px solid #24382d; border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+.panel .nm { font-size: 12px; letter-spacing: .1em; color: #8fa398; margin-bottom: 12px; }
+.modes { display: flex; gap: 10px; margin-bottom: 16px; }
+.modes button { flex: 1; }
+button {
+  background: #182420; color: #cfd8d2; border: 1px solid #2b3d33; border-radius: 10px;
+  padding: 14px 10px; font: inherit; font-size: 15px; cursor: pointer;
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: none;
+}
+button.sel { background: #1f6f43; border-color: #2e8f5b; color: #fff; }
+button:disabled { opacity: .35; cursor: default; }
+button:active:not(:disabled) { transform: translateY(1px); }
+.ctrls { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.btn-start { background: #14532d; border-color: #22c55e; color: #eafff2; }
+.btn-stop { background: #5f1d1d; border-color: #ef4444; color: #ffecec; }
+.btn-gate.gateopen { background: #5f451d; border-color: #ffb340; color: #fff6e5; }
+.btn-note { font-size: 11px; }
+.hint { color: #63796a; font-size: 12px; margin-top: 12px; line-height: 1.6; }
+
+.rungs {
+  background: #101a15; border: 1px solid #24382d; border-radius: 10px;
+  padding: 16px; font-size: 13.5px; line-height: 1.9; overflow-x: auto; margin-bottom: 20px;
+}
+.rungs .cm { color: #63796a; }
+.rungs .rung { margin-bottom: 10px; }
+.rungs .rung:last-child { margin-bottom: 0; }
+.rungs .logic { white-space: nowrap; }
+
+table.map { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.map th, table.map td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #24382d; }
+table.map th { color: #8fa398; font-size: 12px; letter-spacing: .1em; font-weight: normal; }
+table.map tr:last-child td { border-bottom: none; }
+.rw { color: #39d98a; }
+.ro { color: #63796a; }
+
+.foot { color: #63796a; font-size: 12px; margin-top: 14px; line-height: 1.7; }
+code { color: #9fc5ae; }
